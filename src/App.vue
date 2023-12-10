@@ -1,6 +1,6 @@
 <template>
-  <div class="justify-center flex bg-blue-300 items-center h-screen">
-    <div class="text-4xl">Hello Welcome to Tailwind Css</div>
+  <div>
+    <h1>Hello Welcome to Tailwind Css</h1>
   </div>
 </template>
 
@@ -9,3 +9,7 @@ export default {
   name: "App",
 };
 </script>
+<style lang="scss" scoped>
+@import "./assets/scss/variables.scss";
+@import "./assets/scss/theme.scss";
+</style>
