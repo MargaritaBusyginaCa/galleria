@@ -1,5 +1,9 @@
 <template>
   <div>
-    <h1>Home page</h1>
+    <p>Home page</p>
+    <ul>
+      <li>one</li>
+      <li>two</li>
+    </ul>
   </div>
 </template>

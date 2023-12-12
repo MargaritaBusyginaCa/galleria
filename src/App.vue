@@ -1,17 +1,18 @@
+<script setup>
+import Navbar from "./components/Navbar.vue";
+</script>
+
 <template>
-  <div>
-    <router-link to="/">Home</router-link>
-    <router-link to="/art-piece">About</router-link>
+  <div class="app">
+    <Navbar />
     <router-view></router-view>
   </div>
 </template>
 
-<script>
-export default {
-  name: "App",
-};
-</script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "./assets/scss/variables.scss";
 @import "./assets/scss/theme.scss";
+.app {
+  padding: 40px 40px 0 40px;
+}
 </style>

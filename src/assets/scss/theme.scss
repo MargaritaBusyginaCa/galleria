@@ -1,10 +1,10 @@
 @import "./variables.scss";
 body {
+  font-family: $font-primary;
   h1,
   h2,
   h3,
   p {
-    font-family: $font-primary;
     color: $black;
     font-weight: 700;
   }

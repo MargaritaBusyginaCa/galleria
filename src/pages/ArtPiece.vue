@@ -1,5 +1,6 @@
 <template>
   <div>
-    <h1>Art Piece page</h1>
+    <p>Art Piece page</p>
+    <p>Hi there</p>
   </div>
 </template>
