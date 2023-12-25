@@ -9,7 +9,7 @@ const slideshow = computed(() => {
   <div class="flex justify-between pb-[40px]">
     <router-link to="/"> <img :src="logo" alt="galleria logo" /></router-link>
     <p class="tracking-[2.57px] text-[12px]">
-      <router-link to="/art-p iece">{{
+      <router-link to="/art-piece">{{
         slideshow.toLocaleUpperCase()
       }}</router-link>
     </p>
