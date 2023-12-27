@@ -9,78 +9,12 @@
       "name": "Vincent Van Gogh"
     },
     "images": {
-      "thumbnail": {
-        "path": "../assets/content/starry-night/thumbnail.jpg",
-        "height": "250"
-      },
+      "thumbnail": "../assets/content/starry-night/thumbnail.jpg",
       "hero": {
         "small": "../assets/content/starry-night/hero-small.jpg",
         "large": "../assets/content/starry-night/hero-large.jpg"
       },
       "gallery": "../assets/content/starry-night/gallery.jpg"
-    }
-  },
-  {
-    "name": "The Storm on the Sea of Galilee",
-    "year": 1633,
-    "description": "The painting, in vertical format, shows a close-up view of Christ's disciples struggling frantically against the heavy storm to regain control of their fishing boat. A huge wave beats the bow and rips the sail. One of the disciples is seen vomiting over the side. Another one, looking directly out at the viewer, is a self-portrait of the artist. Only Christ, depicted on the right, remains calm.",
-    "source": "https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee",
-    "artist": {
-      "image": "../assets/content/the-storm-on-the-sea-of-galilee/artist.jpg",
-      "name": "Rembrandt"
-    },
-    "images": {
-      "thumbnail": {
-        "path": "../assets/content/the-storm-on-the-sea-of-galilee/thumbnail.jpg",
-        "height": "340"
-      },
-      "hero": {
-        "small": "../assets/content/the-storm-on-the-sea-of-galilee/hero-small.jpg",
-        "large": "../assets/content/the-storm-on-the-sea-of-galilee/hero-large.jpg"
-      },
-      "gallery": "../assets/content/the-storm-on-the-sea-of-galilee/gallery.jpg"
-    }
-  },
-  {
-    "name": "Lady with an Ermine",
-    "year": 1489,
-    "description": "The Lady with an Ermine (Italian: Dama con l'ermellino [ˈdaːma kon lermelˈliːno]; Polish: Dama z gronostajem) is a portrait painting widely attributed to the Italian Renaissance artist Leonardo da Vinci. Dated to c. 1489–1491, the work is painted in oils on a panel of walnut wood. Its subject is Cecilia Gallerani, a mistress of Ludovico Sforza (\"Il Moro\"), Duke of Milan; Leonardo was painter to the Sforza court at the time of its execution. It is one of only four surviving portraits of women painted by Leonardo, the others being Ginevra de' Benci, La Belle Ferronnière and the Mona Lisa",
-    "source": "https://en.wikipedia.org/wiki/Lady_with_an_Ermine",
-    "artist": {
-      "image": "../assets/content/lady-with-an-ermine/artist.jpg",
-      "name": "Leonardo da Vinci"
-    },
-    "images": {
-      "thumbnail": {
-        "path": "../assets/content/lady-with-an-ermine/thumbnail.jpg",
-        "height": "420"
-      },
-      "hero": {
-        "small": "../assets/content/lady-with-an-ermine/hero-small.jpg",
-        "large": "../assets/content/lady-with-an-ermine/hero-large.jpg"
-      },
-      "gallery": "../assets/content/lady-with-an-ermine/gallery.jpg"
-    }
-  },
-  {
-    "name": "The Boy in the Red Vest",
-    "year": 1889,
-    "description": "Cézanne painted four oil portraits of this Italian boy in the red vest, all in different poses, which allowed him to study the relationship between the figure and space. The most famous of the four, and the one commonly referred to by this title, is the one which depicts the boy in a melancholic seated pose with his elbow on a table and his head cradled in his hand. It is currently held in Zürich, Switzerland. The other three portraits, of different poses, are in museums in the US",
-    "source": "https://en.wikipedia.org/wiki/The_Boy_in_the_Red_Vest",
-    "artist": {
-      "image": "../assets/content/the-boy-in-the-red-vest/artist.jpg",
-      "name": "Paul Cézanne"
-    },
-    "images": {
-      "thumbnail": {
-        "path": "../assets/content/the-boy-in-the-red-vest/thumbnail.jpg",
-        "height": "260"
-      },
-      "hero": {
-        "small": "../assets/content/the-boy-in-the-red-vest/hero-small.jpg",
-        "large": "../assets/content/the-boy-in-the-red-vest/hero-large.jpg"
-      },
-      "gallery": "../assets/content/the-boy-in-the-red-vest/gallery.jpg"
     }
   },
   {
@@ -93,15 +27,66 @@
       "name": "Johannes Vermeer"
     },
     "images": {
-      "thumbnail": {
-        "path": "../assets/content/girl-with-pearl-earring/thumbnail.jpg",
-        "height": "400"
-      },
+      "thumbnail": "../assets/content/girl-with-pearl-earring/thumbnail.jpg",
       "hero": {
         "small": "../assets/content/girl-with-pearl-earring/hero-small.jpg",
         "large": "../assets/content/girl-with-pearl-earring/hero-large.jpg"
       },
       "gallery": "../assets/content/girl-with-pearl-earring/gallery.jpg"
+    }
+  },
+  {
+    "name": "Guernica",
+    "year": 1937,
+    "description": "The scene occurs within a room where, on the left, a wide-eyed bull stands over a grieving woman holding a dead child in her arms. In the center of the room a horse falls in agony with a large gaping hole in its side, as if it had just been run through by a spear or javelin. The horse appears to be wearing chain mail armor, decorated with vertical tally marks arranged in rows. A dead and dismembered soldier lies under the horse. The hand of his severed right arm grasps a shattered sword, from which a flower grows.",
+    "source": "https://en.wikipedia.org/wiki/Guernica_(Picasso)",
+    "artist": {
+      "image": "../assets/content/guernica/artist.jpg",
+      "name": "Pablo Picasso"
+    },
+    "images": {
+      "thumbnail": "../assets/content/guernica/thumbnail.jpg",
+      "hero": {
+        "small": "../assets/content/guernica/hero-small.jpg",
+        "large": "../assets/content/guernica/hero-large.jpg"
+      },
+      "gallery": "../assets/content/guernica/gallery.jpg"
+    }
+  },
+  {
+    "name": "Penitent Magdalene",
+    "year": 1625,
+    "description": "Penitent Magdalene is a painting by the Italian artist Artemisia Gentileschi. It hangs in Seville Cathedral. It has probably been in the cathedral since the late 17th century. The painting's first home was the collection of Fernando Enriquez Afan de Ribera, from 1626 to 1637. She returned to the subject later in the 1620s in Mary Magdalene as Melancholy.",
+    "source": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Artemisia_Gentileschi)",
+    "artist": {
+      "image": "../assets/content/penitent-magdalene/artist.jpg",
+      "name": "Artemisia Gentileschi"
+    },
+    "images": {
+      "thumbnail": "../assets/content/penitent-magdalene/thumbnail.jpg",
+      "hero": {
+        "small": "../assets/content/penitent-magdalene/hero-small.jpg",
+        "large": "../assets/content/penitent-magdalene/hero-large.jpg"
+      },
+      "gallery": "../assets/content/penitent-magdalene/gallery.jpg"
+    }
+  },
+  {
+    "name": "The Storm on the Sea of Galilee",
+    "year": 1633,
+    "description": "The painting, in vertical format, shows a close-up view of Christ's disciples struggling frantically against the heavy storm to regain control of their fishing boat. A huge wave beats the bow and rips the sail. One of the disciples is seen vomiting over the side. Another one, looking directly out at the viewer, is a self-portrait of the artist. Only Christ, depicted on the right, remains calm.",
+    "source": "https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee",
+    "artist": {
+      "image": "../assets/content/the-storm-on-the-sea-of-galilee/artist.jpg",
+      "name": "Rembrandt"
+    },
+    "images": {
+      "thumbnail": "../assets/content/the-storm-on-the-sea-of-galilee/thumbnail.jpg",
+      "hero": {
+        "small": "../assets/content/the-storm-on-the-sea-of-galilee/hero-small.jpg",
+        "large": "../assets/content/the-storm-on-the-sea-of-galilee/hero-large.jpg"
+      },
+      "gallery": "../assets/content/the-storm-on-the-sea-of-galilee/gallery.jpg"
     }
   },
   {
@@ -114,15 +99,66 @@
       "name": "Hokusai"
     },
     "images": {
-      "thumbnail": {
-        "path": "../assets/content/the-great-wave-off-kanagawa/thumbnail.jpg",
-        "height": "280"
-      },
+      "thumbnail": "../assets/content/the-great-wave-off-kanagawa/thumbnail.jpg",
       "hero": {
         "small": "../assets/content/the-great-wave-off-kanagawa/hero-small.jpg",
         "large": "../assets/content/the-great-wave-off-kanagawa/hero-large.jpg"
       },
       "gallery": "../assets/content/the-great-wave-off-kanagawa/gallery.jpg"
+    }
+  },
+  {
+    "name": "Van Gogh Self-portrait",
+    "year": 1889,
+    "description": "This self-portrait was one of about 32 produced over a 10-year period, and these were an important part of his work as a painter; he painted himself because he often lacked the money to pay for models. He took the painting with him to Auvers-sur-Oise, near Paris, where he showed it to Dr. Paul Gachet, who thought it was \"absolutely fanatical\". Art historians are divided as to whether this painting or Self-portrait without beard is Van Gogh's final self-portrait. The art historians Ingo F. Walther and Jan Hulsker consider this to be the last.",
+    "source": "https://en.wikipedia.org/wiki/Van_Gogh_self-portrait_(1889)",
+    "artist": {
+      "image": "../assets/content/van-gogh-self-portrait/artist.jpg",
+      "name": "Vincent Van Gogh"
+    },
+    "images": {
+      "thumbnail": "../assets/content/van-gogh-self-portrait/thumbnail.jpg",
+      "hero": {
+        "small": "../assets/content/van-gogh-self-portrait/hero-small.jpg",
+        "large": "../assets/content/van-gogh-self-portrait/hero-large.jpg"
+      },
+      "gallery": "../assets/content/van-gogh-self-portrait/gallery.jpg"
+    }
+  },
+  {
+    "name": "The Sleeping Gypsy",
+    "year": 1897,
+    "description": "The Sleeping Gypsy (French: La Bohémienne endormie) is an 1897 oil painting by French Naïve artist Henri Rousseau (1844–1910). It is a fantastical depiction of a lion musing over a sleeping woman on a moonlit night. Rousseau first exhibited the painting at the 13th Salon des Indépendants, and tried unsuccessfully to sell it to the mayor of his hometown, Laval. Instead, it entered the private collection of a Parisian charcoal merchant where it remained until 1924, when it was discovered by the art critic Louis Vauxcelles.",
+    "source": "https://en.wikipedia.org/wiki/The_Sleeping_Gypsy",
+    "artist": {
+      "image": "../assets/content/the-sleeping-gypsy/artist.jpg",
+      "name": "Henri Rousseau"
+    },
+    "images": {
+      "thumbnail": "../assets/content/the-sleeping-gypsy/thumbnail.jpg",
+      "hero": {
+        "small": "../assets/content/the-sleeping-gypsy/hero-small.jpg",
+        "large": "../assets/content/the-sleeping-gypsy/hero-large.jpg"
+      },
+      "gallery": "../assets/content/the-sleeping-gypsy/gallery.jpg"
+    }
+  },
+  {
+    "name": "Lady with an Ermine",
+    "year": 1489,
+    "description": "The Lady with an Ermine (Italian: Dama con l'ermellino [ˈdaːma kon lermelˈliːno]; Polish: Dama z gronostajem) is a portrait painting widely attributed to the Italian Renaissance artist Leonardo da Vinci. Dated to c. 1489–1491, the work is painted in oils on a panel of walnut wood. Its subject is Cecilia Gallerani, a mistress of Ludovico Sforza (\"Il Moro\"), Duke of Milan; Leonardo was painter to the Sforza court at the time of its execution. It is one of only four surviving portraits of women painted by Leonardo, the others being Ginevra de' Benci, La Belle Ferronnière and the Mona Lisa",
+    "source": "https://en.wikipedia.org/wiki/Lady_with_an_Ermine",
+    "artist": {
+      "image": "../assets/content/lady-with-an-ermine/artist.jpg",
+      "name": "Leonardo da Vinci"
+    },
+    "images": {
+      "thumbnail": "../assets/content/lady-with-an-ermine/thumbnail.jpg",
+      "hero": {
+        "small": "../assets/content/lady-with-an-ermine/hero-small.jpg",
+        "large": "../assets/content/lady-with-an-ermine/hero-large.jpg"
+      },
+      "gallery": "../assets/content/lady-with-an-ermine/gallery.jpg"
     }
   },
   {
@@ -135,10 +171,7 @@
       "name": "Vincent Van Gogh"
     },
     "images": {
-      "thumbnail": {
-        "path": "../assets/content/the-night-cafe/thumbnail.jpg",
-        "height": "260"
-      },
+      "thumbnail": "../assets/content/the-night-cafe/thumbnail.jpg",
       "hero": {
         "small": "../assets/content/the-night-cafe/hero-small.jpg",
         "large": "../assets/content/the-night-cafe/hero-large.jpg"
@@ -156,10 +189,7 @@
       "name": "Jan van Eyck"
     },
     "images": {
-      "thumbnail": {
-        "path": "../assets/content/arnolfini-portrait/thumbnail.jpg",
-        "height": "330"
-      },
+      "thumbnail": "../assets/content/arnolfini-portrait/thumbnail.jpg",
       "hero": {
         "small": "../assets/content/arnolfini-portrait/hero-small.jpg",
         "large": "../assets/content/arnolfini-portrait/hero-large.jpg"
@@ -168,45 +198,39 @@
     }
   },
   {
-    "name": "Guernica",
-    "year": 1937,
-    "description": "The scene occurs within a room where, on the left, a wide-eyed bull stands over a grieving woman holding a dead child in her arms. In the center of the room a horse falls in agony with a large gaping hole in its side, as if it had just been run through by a spear or javelin. The horse appears to be wearing chain mail armor, decorated with vertical tally marks arranged in rows. A dead and dismembered soldier lies under the horse. The hand of his severed right arm grasps a shattered sword, from which a flower grows.",
-    "source": "https://en.wikipedia.org/wiki/Guernica_(Picasso)",
+    "name": "The Basket of Apples",
+    "year": 1893,
+    "description": "The Basket of Apples (French: Le panier de pommes) is a still life oil painting by French artist Paul Cézanne, which he created c. 1893. The painting is particularly remarkable for its creative composition, which rejected realistic representation in favour of distorting objects to create multiple perspectives. This approach eventually influenced other art movements, including Fauvism and Cubism. It belongs to the Helen Birch Bartlett Memorial Collection of the Art Institute of Chicago.",
+    "source": "https://en.wikipedia.org/wiki/The_Basket_of_Apples",
     "artist": {
-      "image": "../assets/content/guernica/artist.jpg",
-      "name": "Pablo Picasso"
+      "image": "../assets/content/the-basket-of-apples/artist.jpg",
+      "name": "Paul Cézanne"
     },
     "images": {
-      "thumbnail": {
-        "path": "../assets/content/guernica/thumbnail.jpg",
-        "height": "285"
-      },
+      "thumbnail": "../assets/content/the-basket-of-apples/thumbnail.jpg",
       "hero": {
-        "small": "../assets/content/guernica/hero-small.jpg",
-        "large": "../assets/content/guernica/hero-large.jpg"
+        "small": "../assets/content/the-basket-of-apples/hero-small.jpg",
+        "large": "../assets/content/the-basket-of-apples/hero-large.jpg"
       },
-      "gallery": "../assets/content/guernica/gallery.jpg"
+      "gallery": "../assets/content/the-basket-of-apples/gallery.jpg"
     }
   },
   {
-    "name": "Van Gogh Self-portrait",
+    "name": "The Boy in the Red Vest",
     "year": 1889,
-    "description": "This self-portrait was one of about 32 produced over a 10-year period, and these were an important part of his work as a painter; he painted himself because he often lacked the money to pay for models. He took the painting with him to Auvers-sur-Oise, near Paris, where he showed it to Dr. Paul Gachet, who thought it was \"absolutely fanatical\". Art historians are divided as to whether this painting or Self-portrait without beard is Van Gogh's final self-portrait. The art historians Ingo F. Walther and Jan Hulsker consider this to be the last.",
-    "source": "https://en.wikipedia.org/wiki/Van_Gogh_self-portrait_(1889)",
+    "description": "Cézanne painted four oil portraits of this Italian boy in the red vest, all in different poses, which allowed him to study the relationship between the figure and space. The most famous of the four, and the one commonly referred to by this title, is the one which depicts the boy in a melancholic seated pose with his elbow on a table and his head cradled in his hand. It is currently held in Zürich, Switzerland. The other three portraits, of different poses, are in museums in the US",
+    "source": "https://en.wikipedia.org/wiki/The_Boy_in_the_Red_Vest",
     "artist": {
-      "image": "../assets/content/van-gogh-self-portrait/artist.jpg",
-      "name": "Vincent Van Gogh"
+      "image": "../assets/content/the-boy-in-the-red-vest/artist.jpg",
+      "name": "Paul Cézanne"
     },
     "images": {
-      "thumbnail": {
-        "path": "../assets/content/van-gogh-self-portrait/thumbnail.jpg",
-        "height": "500"
-      },
+      "thumbnail": "../assets/content/the-boy-in-the-red-vest/thumbnail.jpg",
       "hero": {
-        "small": "../assets/content/van-gogh-self-portrait/hero-small.jpg",
-        "large": "../assets/content/van-gogh-self-portrait/hero-large.jpg"
+        "small": "../assets/content/the-boy-in-the-red-vest/hero-small.jpg",
+        "large": "../assets/content/the-boy-in-the-red-vest/hero-large.jpg"
       },
-      "gallery": "../assets/content/van-gogh-self-portrait/gallery.jpg"
+      "gallery": "../assets/content/the-boy-in-the-red-vest/gallery.jpg"
     }
   },
   {
@@ -219,10 +243,7 @@
       "name": "Leonardo da Vinci"
     },
     "images": {
-      "thumbnail": {
-        "path": "../assets/content/mona-lisa/thumbnail.jpg",
-        "height": "525"
-      },
+      "thumbnail": "../assets/content/mona-lisa/thumbnail.jpg",
       "hero": {
         "small": "../assets/content/mona-lisa/hero-small.jpg",
         "large": "../assets/content/mona-lisa/hero-large.jpg"
@@ -230,72 +251,6 @@
       "gallery": "../assets/content/mona-lisa/gallery.jpg"
     }
   },
-  {
-    "name": "Penitent Magdalene",
-    "year": 1625,
-    "description": "Penitent Magdalene is a painting by the Italian artist Artemisia Gentileschi. It hangs in Seville Cathedral. It has probably been in the cathedral since the late 17th century. The painting's first home was the collection of Fernando Enriquez Afan de Ribera, from 1626 to 1637. She returned to the subject later in the 1620s in Mary Magdalene as Melancholy.",
-    "source": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Artemisia_Gentileschi)",
-    "artist": {
-      "image": "../assets/content/penitent-magdalene/artist.jpg",
-      "name": "Artemisia Gentileschi"
-    },
-    "images": {
-      "thumbnail": {
-        "path": "../assets/content/penitent-magdalene/thumbnail.jpg",
-        "height": "250"
-      },
-      "hero": {
-        "small": "../assets/content/penitent-magdalene/hero-small.jpg",
-        "large": "../assets/content/penitent-magdalene/hero-large.jpg"
-      },
-      "gallery": "../assets/content/penitent-magdalene/gallery.jpg"
-    }
-  },
-
-  {
-    "name": "The Sleeping Gypsy",
-    "year": 1897,
-    "description": "The Sleeping Gypsy (French: La Bohémienne endormie) is an 1897 oil painting by French Naïve artist Henri Rousseau (1844–1910). It is a fantastical depiction of a lion musing over a sleeping woman on a moonlit night. Rousseau first exhibited the painting at the 13th Salon des Indépendants, and tried unsuccessfully to sell it to the mayor of his hometown, Laval. Instead, it entered the private collection of a Parisian charcoal merchant where it remained until 1924, when it was discovered by the art critic Louis Vauxcelles.",
-    "source": "https://en.wikipedia.org/wiki/The_Sleeping_Gypsy",
-    "artist": {
-      "image": "../assets/content/the-sleeping-gypsy/artist.jpg",
-      "name": "Henri Rousseau"
-    },
-    "images": {
-      "thumbnail": {
-        "path": "../assets/content/the-sleeping-gypsy/thumbnail.jpg",
-        "height": "250"
-      },
-      "hero": {
-        "small": "../assets/content/the-sleeping-gypsy/hero-small.jpg",
-        "large": "../assets/content/the-sleeping-gypsy/hero-large.jpg"
-      },
-      "gallery": "../assets/content/the-sleeping-gypsy/gallery.jpg"
-    }
-  },
-
-  {
-    "name": "The Basket of Apples",
-    "year": 1893,
-    "description": "The Basket of Apples (French: Le panier de pommes) is a still life oil painting by French artist Paul Cézanne, which he created c. 1893. The painting is particularly remarkable for its creative composition, which rejected realistic representation in favour of distorting objects to create multiple perspectives. This approach eventually influenced other art movements, including Fauvism and Cubism. It belongs to the Helen Birch Bartlett Memorial Collection of the Art Institute of Chicago.",
-    "source": "https://en.wikipedia.org/wiki/The_Basket_of_Apples",
-    "artist": {
-      "image": "../assets/content/the-basket-of-apples/artist.jpg",
-      "name": "Paul Cézanne"
-    },
-    "images": {
-      "thumbnail": {
-        "path": "../assets/content/the-basket-of-apples/thumbnail.jpg",
-        "height": "430"
-      },
-      "hero": {
-        "small": "../assets/content/the-basket-of-apples/hero-small.jpg",
-        "large": "../assets/content/the-basket-of-apples/hero-large.jpg"
-      },
-      "gallery": "../assets/content/the-basket-of-apples/gallery.jpg"
-    }
-  },
-
   {
     "name": "The Swing",
     "year": 1767,
@@ -306,10 +261,7 @@
       "name": "Jean-Honoré Fragonard"
     },
     "images": {
-      "thumbnail": {
-        "path": "../assets/content/the-swing/thumbnail.jpg",
-        "height": "340"
-      },
+      "thumbnail": "../assets/content/the-swing/thumbnail.jpg",
       "hero": {
         "small": "../assets/content/the-swing/hero-small.jpg",
         "large": "../assets/content/the-swing/hero-large.jpg"
