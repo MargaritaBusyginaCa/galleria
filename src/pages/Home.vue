@@ -1,14 +1,16 @@
 <script setup>
-import { computed, ref, onMounted } from "vue";
+import { computed, onMounted } from "vue";
 import content from "../assets/content.json";
 import Macy from "macy";
-
+import { useRouter } from "vue-router";
+const router = useRouter();
 const imagePaths = computed(() => {
   return content.map(
     (piece) => new URL(piece.images.thumbnail, import.meta.url)
   );
 });
 
+//instanciating macy layout instance
 onMounted(() => {
   Macy({
     container: "#macy-container",
@@ -25,6 +27,13 @@ onMounted(() => {
     },
   });
 });
+
+const navigate = (imageIndex) => {
+  router.push({
+    name: "ArtPiece",
+    params: { id: imageIndex },
+  });
+};
 </script>
 <template>
   <div class="container--main" id="macy-container">
@@ -33,7 +42,7 @@ onMounted(() => {
       :key="index"
       class="item-container"
     >
-      <img :src="imagePath" alt="" />
+      <img :src="imagePath" alt="" @click="navigate(index)" />
     </div>
   </div>
 </template>

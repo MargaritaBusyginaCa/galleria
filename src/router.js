@@ -4,7 +4,12 @@ import ArtPiece from "./pages/ArtPiece.vue";
 
 const routes = [
   { path: "/", component: Home },
-  { path: "/art-piece", component: ArtPiece },
+  {
+    path: "/art-piece/:id",
+    name: "ArtPiece",
+    component: ArtPiece,
+    props: true,
+  },
 ];
 
 const router = createRouter({
