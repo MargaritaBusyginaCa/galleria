@@ -28,10 +28,10 @@ onMounted(() => {
   });
 });
 
-const navigate = (imageIndex) => {
+const navigate = (paintingIndex) => {
   router.push({
     name: "ArtPiece",
-    params: { id: imageIndex },
+    params: { id: paintingIndex },
   });
 };
 </script>
