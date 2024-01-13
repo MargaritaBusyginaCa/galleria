@@ -2,7 +2,7 @@
 import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 import content from "../assets/content.json";
-
+import Footer from "../components/Footer.vue";
 const route = useRoute();
 const paintingIndex = ref(route.params.id);
 const paintingImagePath = new URL(
@@ -16,41 +16,50 @@ const artistImagePath = new URL(
 onMounted(() => {});
 </script>
 <template>
-  <main>
-    <div class="painting--visual">
-      <div class="painting-hero">
-        <img :src="paintingImagePath" alt="" />
-        <div class="view-image">VIEW IMAGE</div>
-      </div>
-      <div class="painting-name-artist">
-        <div class="painting-name">
-          <h1>{{ content[paintingIndex].name }}</h1>
-          <p>{{ content[paintingIndex].artist.name }}</p>
+  <div class="test">
+    <main>
+      <div class="painting--visual">
+        <div class="painting-hero">
+          <img :src="paintingImagePath" alt="" />
+          <div class="view-image">VIEW IMAGE</div>
         </div>
-        <div class="artist">
-          <img :src="artistImagePath" alt="" />
+        <div class="painting-name-artist">
+          <div class="painting-name">
+            <h1>{{ content[paintingIndex].name }}</h1>
+            <p>{{ content[paintingIndex].artist.name }}</p>
+          </div>
+          <div class="artist">
+            <img :src="artistImagePath" alt="" />
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="painting-information">
-      <p class="year">{{ content[paintingIndex].year }}</p>
-      <p class="history">
-        {{ content[paintingIndex].description }}
-      </p>
+      <div class="painting-information">
+        <p class="year">{{ content[paintingIndex].year }}</p>
+        <p class="history">
+          {{ content[paintingIndex].description }}
+        </p>
 
-      <a
-        :href="content[paintingIndex].source"
-        target="_blank"
-        class="source-link"
-        >Go to sourse</a
-      >
-    </div>
-  </main>
+        <a
+          :href="content[paintingIndex].source"
+          target="_blank"
+          class="source-link"
+          >Go to sourse</a
+        >
+      </div>
+    </main>
+    <Footer />
+  </div>
 </template>
 
 <style lang="scss">
 @import "../assets/scss/variables.scss";
+.test {
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 main {
   display: flex;
   gap: 100px;
