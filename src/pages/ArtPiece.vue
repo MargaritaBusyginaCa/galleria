@@ -1,19 +1,26 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
 import content from "../assets/content.json";
 import Footer from "../components/Footer.vue";
+
 const route = useRoute();
 const paintingIndex = ref(route.params.id);
-const paintingImagePath = new URL(
-  content[paintingIndex.value].images.hero.small,
-  import.meta.url
-);
-const artistImagePath = new URL(
-  content[paintingIndex.value].artist.image,
-  import.meta.url
-);
-onMounted(() => {});
+const paintingImagePath = computed(() => {
+  return new URL(
+    content[paintingIndex.value].images.hero.small,
+    import.meta.url
+  );
+});
+const artistImagePath = computed(() => {
+  return new URL(content[paintingIndex.value].artist.image, import.meta.url);
+});
+function nextPainting(value) {
+  paintingIndex.value = value;
+}
+function previousPainting(value) {
+  paintingIndex.value = value;
+}
 </script>
 <template>
   <div class="test">
@@ -48,7 +55,10 @@ onMounted(() => {});
         >
       </div>
     </main>
-    <Footer />
+    <Footer
+      @next-painting="nextPainting"
+      @previous-painting="previousPainting"
+    />
   </div>
 </template>
 

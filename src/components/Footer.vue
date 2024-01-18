@@ -2,8 +2,10 @@
 import backButton from "../assets/icons/icon-back-button.svg";
 import nextButton from "../assets/icons/icon-next-button.svg";
 import content from "../assets/content.json";
-import { computed, ref } from "vue";
+import { useRouter } from "vue-router";
+import { ref } from "vue";
 
+const router = useRouter();
 const props = defineProps({
   paintingIndex: {
     type: Number,
@@ -11,16 +13,23 @@ const props = defineProps({
   },
 });
 const currentIndex = ref(props.paintingIndex);
-const nextPath = computed(() => {
-  let nextIndex = +props.paintingIndex + 1;
-  currentIndex.value = nextIndex;
-  return `/art-piece/${nextIndex}`;
-});
-const previousPath = computed(() => {
-  let previousIndex = +props.paintingIndex - 1;
-  currentIndex.value = previousIndex;
-  return `/art-piece/${previousIndex}`;
-});
+const emit = defineEmits(["nextPainting", "previousPainting"]);
+function nextPainting() {
+  currentIndex.value++;
+  navigate();
+  emit("nextPainting", currentIndex.value);
+}
+function previousPainting() {
+  currentIndex.value--;
+  navigate();
+  emit("previousPainting", currentIndex.value);
+}
+const navigate = () => {
+  router.push({
+    name: "ArtPiece",
+    params: { id: currentIndex.value },
+  });
+};
 </script>
 <template>
   <div class="flex justify-between items-center">
@@ -29,15 +38,13 @@ const previousPath = computed(() => {
       <p>{{ content[paintingIndex].artist.name }}</p>
     </div>
     <div class="flex gap-[40px]">
-      <router-link :to="previousPath">
+      <button @click="previousPainting">
         <img :src="backButton" alt="go-back-button" />
-      </router-link>
-      <router-link :to="nextPath">
+      </button>
+
+      <button @click="nextPainting">
         <img :src="nextButton" alt="go-next-button" />
-      </router-link>
+      </button>
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
-@import "../assets/scss/variables.scss";
-</style>
