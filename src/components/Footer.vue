@@ -10,12 +10,21 @@ const router = useRouter();
 const currentIndex = ref(route.params.id);
 const emit = defineEmits(["nextPainting", "previousPainting"]);
 function nextPainting() {
-  currentIndex.value++;
+  if (currentIndex.value != content.length - 1) {
+    currentIndex.value++;
+  } else {
+    currentIndex.value = 0;
+  }
+
   navigate();
   emit("nextPainting", currentIndex.value);
 }
 function previousPainting() {
-  currentIndex.value--;
+  if (currentIndex.value != 0) {
+    currentIndex.value--;
+  } else {
+    currentIndex.value = content.length - 1;
+  }
   navigate();
   emit("previousPainting", currentIndex.value);
 }
