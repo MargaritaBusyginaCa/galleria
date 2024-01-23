@@ -1,16 +1,24 @@
 <script setup>
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import logo from "../assets/icons/logo.svg";
-const slideshow = computed(() => {
-  return "start slideshow";
+const isSlideShowStarted = ref(false);
+const slideshowTitle = computed(() => {
+  return isSlideShowStarted.value ? "stop slideshow" : "start slideshow";
 });
+const slideShowLink = computed(() => {
+  return isSlideShowStarted.value ? "/" : "/art-piece/0";
+});
+
+const navigateToSlideShow = () => {
+  isSlideShowStarted.value = !isSlideShowStarted.value;
+};
 </script>
 <template>
   <main class="flex justify-between mb-[100px]">
     <router-link to="/"> <img :src="logo" alt="galleria logo" /></router-link>
     <p class="tracking-[2.57px] text-[12px]">
-      <router-link to="/art-piece/0">{{
-        slideshow.toLocaleUpperCase()
+      <router-link :to="slideShowLink" @click="navigateToSlideShow">{{
+        slideshowTitle.toLocaleUpperCase()
       }}</router-link>
     </p>
   </main>
