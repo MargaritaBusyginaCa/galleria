@@ -37,8 +37,9 @@ const navigate = () => {
 const activeTab = computed(() => {
   const totalPaintings = content.length;
   let currentPainting = currentIndex.value;
-  const finalPercentage =
-    Math.round((++currentPainting / totalPaintings) * 10000) / 100;
+  const finalPercentage = Math.round(
+    (++currentPainting / totalPaintings) * 100
+  );
 
   return `${finalPercentage}%`;
 });
