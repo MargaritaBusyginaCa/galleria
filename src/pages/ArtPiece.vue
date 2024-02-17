@@ -3,7 +3,8 @@ import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
 import content from "../assets/content.json";
 import Footer from "../components/Footer.vue";
-
+import ViewPaintingModal from "../components/ViewPaintingModal.vue";
+import viewImageIcon from "../assets/icons/icon-view-image.svg";
 const route = useRoute();
 const paintingIndex = ref(route.params.id);
 const paintingImagePath = computed(() => {
@@ -21,14 +22,26 @@ function nextPainting(value) {
 function previousPainting(value) {
   paintingIndex.value = value;
 }
+
+const showModal = ref(false);
+
+const openModal = () => {
+  showModal.value = true;
+};
+const closeModal = () => {
+  showModal.value = false;
+};
 </script>
 <template>
-  <div class="test">
-    <main>
+  <main class="art-piece-container">
+    <div class="art-piece">
       <div class="painting--visual">
         <div class="painting-hero">
-          <img :src="paintingImagePath" alt="" />
-          <div class="view-image">VIEW IMAGE</div>
+          <img :src="paintingImagePath" :alt="content[paintingIndex].name" />
+          <div class="view-image" @click="openModal">
+            <img :src="viewImageIcon" alt="view image" />
+            <span>VIEW IMAGE</span>
+          </div>
         </div>
         <div class="painting-name-artist">
           <div class="painting-name">
@@ -54,23 +67,29 @@ function previousPainting(value) {
           >Go to sourse</a
         >
       </div>
-    </main>
+    </div>
+    <ViewPaintingModal
+      :show-modal="showModal"
+      :painting-index="paintingIndex"
+      @close-modal="closeModal"
+    />
     <Footer
       @next-painting="nextPainting"
       @previous-painting="previousPainting"
     />
-  </div>
+  </main>
 </template>
 
 <style lang="scss">
 @import "../assets/scss/variables.scss";
-.test {
+.art-piece-container {
   min-height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 80px;
 }
-main {
+.art-piece {
   display: flex;
   gap: 100px;
   .painting--visual {
@@ -84,6 +103,8 @@ main {
         object-fit: cover;
       }
       .view-image {
+        display: flex;
+        gap: 14px;
         margin: 16px;
         padding: 14px 16px;
         font-size: 10px;
@@ -92,6 +113,10 @@ main {
         background-color: $black;
         position: absolute;
         bottom: 0;
+        img {
+          height: 12px;
+          width: 12px;
+        }
       }
     }
     .painting-name-artist {
