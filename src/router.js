@@ -1,20 +1,14 @@
-import { createRouter, createWebHistory } from "vue-router";
-import Home from "./pages/Home.vue";
-import ArtPiece from "./pages/ArtPiece.vue";
-
+import { createRouter, createMemoryHistory } from "vue-router";
+import Home from "@/pages/Home.vue";
 const routes = [
-  { path: "/", component: Home },
   {
-    path: "/art-piece/:id",
-    name: "ArtPiece",
-    component: ArtPiece,
-    props: true,
+    path: "/",
+    name: "Home",
+    component: Home,
   },
 ];
-
 const router = createRouter({
-  history: createWebHistory(),
+  history: createMemoryHistory(),
   routes,
 });
-
 export default router;
