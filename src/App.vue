@@ -1,5 +1,7 @@
 <script setup>
 import Navbar from "@/components/Navbar.vue";
+import { usePaintingStore } from "./stores/painting";
+const paintingStore = usePaintingStore();
 </script>
 
 <template>
@@ -19,6 +21,6 @@ import Navbar from "@/components/Navbar.vue";
   height: 100vh;
 }
 main {
-  padding: 20px;
+  padding: 0 20px;
 }
 </style>
