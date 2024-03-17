@@ -2,15 +2,30 @@
 import { computed } from "vue";
 import { usePaintingStore } from "@/stores/painting";
 import content from "@/assets/content.json";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 const paintingStore = usePaintingStore();
 
 const paintingsPath = computed(() => {
   return content.map((piece) => new URL(piece.images.gallery, import.meta.url));
 });
+function viewPainting(index) {
+  router.push({
+    name: "Slideshow",
+    params: { id: index },
+  });
+  paintingStore.setIndex(index);
+}
 </script>
 
 <template>
-  <div v-for="(painting, index) in content" :key="painting" class="painting">
+  <div
+    v-for="(painting, index) in content"
+    :key="painting"
+    class="painting"
+    @click="viewPainting(index)"
+  >
     <img :src="paintingsPath[index]" :alt="painting.name" />
     <div class="painting-info">
       <p>{{ painting.name }}</p>

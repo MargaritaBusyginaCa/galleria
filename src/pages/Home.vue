@@ -1,9 +1,9 @@
 <script setup>
-import Gallery from "../components/Gallery.vue";
+import GalleryPainting from "../components/GalleryPainting.vue";
 </script>
 <template>
   <div class="gallery-view">
-    <Gallery />
+    <GalleryPainting />
   </div>
 </template>
 <style lang="scss">
