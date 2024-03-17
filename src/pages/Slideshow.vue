@@ -1,9 +1,9 @@
 <script setup>
 import { usePaintingStore } from "@/stores/painting";
-import content from "@/assets/content.json";
-import PaintingMain from "../components/painting-details/PaintingMain.vue";
-import PaintingHistory from "../components/painting-details/PaintingHistory.vue";
-import Footer from "@/components/Footer.vue";
+import PaintingMain from "@/components/PaintingMain.vue";
+import PaintingHistory from "@/components/PaintingHistory.vue";
+// import content from "@/assets/content.json";
+// import Footer from "@/components/Footer.vue";
 
 const paintingStore = usePaintingStore();
 </script>
@@ -17,7 +17,8 @@ const paintingStore = usePaintingStore();
 
 <style lang="scss" scoped>
 .painting-information {
+  margin-top: 70px;
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(2, auto);
 }
 </style>
