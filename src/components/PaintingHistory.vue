@@ -2,7 +2,41 @@
 import { usePaintingStore } from "@/stores/painting";
 import content from "@/assets/content.json";
 const paintingStore = usePaintingStore();
+const goToSource = "Go to Source";
 </script>
+
 <template>
-  <p>{{ content[paintingStore.index].name }}</p>
+  <div class="painting-history">
+    <p class="year">{{ content[paintingStore.index].year }}</p>
+    <p class="description">{{ content[paintingStore.index].description }}</p>
+    <a :href="content[paintingStore.index].source" class="source">{{
+      goToSource
+    }}</a>
+  </div>
 </template>
+
+<style lang="scss" scoped>
+@import "@/assets/scss/variables.scss";
+.painting-history {
+  .year {
+    z-index: -1;
+    font-size: 200px;
+    opacity: 0.1;
+    margin: 70px 0 0 0;
+  }
+  .description {
+    max-width: 400px;
+    height: 300px;
+    font-size: 14px;
+    line-height: 28px;
+    padding-bottom: 165px;
+  }
+  .source {
+    color: $dark_grey;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.93px;
+  }
+}
+</style>

@@ -21,6 +21,6 @@ const paintingStore = usePaintingStore();
   height: 100vh;
 }
 main {
-  padding: 0 20px;
+  padding: 0 50px;
 }
 </style>

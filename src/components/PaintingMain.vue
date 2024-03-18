@@ -6,7 +6,14 @@ const paintingStore = usePaintingStore();
 const imagePath = computed(() => {
   return new URL(content[paintingStore.index].images.gallery, import.meta.url);
 });
+const artistImagePath = computed(() => {
+  return new URL(content[paintingStore.index].artist.image, import.meta.url);
+});
 const viewImageText = "View Image";
+const viewImagePath = new URL(
+  "@/assets/icons/icon-view-image.svg",
+  import.meta.url
+);
 </script>
 
 <template>
@@ -14,20 +21,28 @@ const viewImageText = "View Image";
     <div class="image">
       <img :src="imagePath" :alt="content[paintingStore.index].name" />
       <div class="view-image">
-        <span> {{ viewImageText }} </span>
+        <img :src="viewImagePath" :alt="viewImageText" />
+        <span>{{ viewImageText }}</span>
       </div>
     </div>
+
     <div class="description">
       <h1>
         {{ content[paintingStore.index].name }}
       </h1>
       <p>{{ content[paintingStore.index].artist.name }}</p>
     </div>
+    <img
+      class="artist-image"
+      :src="artistImagePath"
+      :alt="content[paintingStore.index].artist.name"
+    />
   </div>
 </template>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/variables.scss";
+
 .painting-main {
   display: flex;
   align-items: flex-start;
@@ -43,6 +58,19 @@ const viewImageText = "View Image";
     z-index: 1;
     position: absolute;
     bottom: 0;
+    background-color: $black;
+    padding: 16px;
+    margin: 16px;
+    color: $white;
+    font-size: 10px;
+    letter-spacing: 2.14px;
+    text-transform: uppercase;
+    display: flex;
+    gap: 10px;
+    img {
+      height: 12px;
+      width: 12px;
+    }
   }
   .description {
     max-width: 300px;
@@ -57,6 +85,10 @@ const viewImageText = "View Image";
     p {
       margin-bottom: 60px;
     }
+  }
+  .artist-image {
+    margin-top: 500px;
+    margin-left: -250px;
   }
 }
 </style>
