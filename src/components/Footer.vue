@@ -4,18 +4,26 @@ import { useRouter } from "vue-router";
 import content from "@/assets/content.json";
 import goNextIcon from "@/assets/icons/icon-next-button.svg";
 import goBackIcon from "@/assets/icons/icon-back-button.svg";
+import goNextIconDisabled from "@/assets/icons/icon-next-button-disabled.svg";
+import goBackIconDisabled from "@/assets/icons/icon-back-button-disabled.svg";
 import { computed } from "vue";
 
 const router = useRouter();
 const paintingStore = usePaintingStore();
+const isLastPainting = computed(() => {
+  return parseInt(paintingStore.index) == content.length - 1;
+});
+const isFirstPainting = computed(() => {
+  return parseInt(paintingStore.index) == 0;
+});
 function goNext() {
-  if (parseInt(paintingStore.index) != content.length - 1) {
+  if (!isLastPainting.value) {
     paintingStore.increment();
   }
   navigate();
 }
 function goPrevious() {
-  if (paintingStore.index != 0) {
+  if (!isFirstPainting.value) {
     paintingStore.decrement();
   }
   navigate();
@@ -43,10 +51,17 @@ const progress = computed(() => {
     </div>
     <div class="buttons">
       <button @click="goPrevious">
-        <img :src="goBackIcon" alt="go back" />
+        <img
+          :src="isFirstPainting ? goBackIconDisabled : goBackIcon"
+          alt="go back"
+        />
       </button>
       <button @click="goNext">
-        <img :src="goNextIcon" alt="go next" />
+        <img
+          :src="isLastPainting ? goNextIconDisabled : goNextIcon"
+          alt="go next"
+          disabled="true"
+        />
       </button>
     </div>
   </footer>
