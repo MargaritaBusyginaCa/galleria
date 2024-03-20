@@ -7,9 +7,7 @@ const paintingStore = usePaintingStore();
 <template>
   <div class="app">
     <Navbar />
-    <main>
-      <RouterView />
-    </main>
+    <RouterView />
   </div>
 </template>
 
@@ -19,9 +17,5 @@ const paintingStore = usePaintingStore();
 .app {
   width: 100%;
   height: 100vh;
-}
-main {
-  padding: 0 50px;
-  height: 90%;
 }
 </style>

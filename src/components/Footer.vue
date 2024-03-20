@@ -43,18 +43,24 @@ footer {
   align-items: center;
   padding: 20px 0;
   border-top: 1px solid black;
-  h2 {
-    color: $black;
-    font-weight: 700;
-    font-size: 18px;
-    margin: 0;
+
+  .painting-info {
+    padding: 0 50px;
+    h2 {
+      color: $black;
+      font-weight: 700;
+      font-size: 18px;
+      margin: 0;
+    }
+    span {
+      font-size: 13px;
+      color: $black;
+      font-weight: 400;
+    }
   }
-  span {
-    font-size: 13px;
-    color: $black;
-    font-weight: 400;
-  }
+
   .buttons {
+    padding: 0 50px;
     display: flex;
     gap: 20px;
     button {
