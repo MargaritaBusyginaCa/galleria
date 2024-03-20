@@ -4,15 +4,19 @@ import { useRouter } from "vue-router";
 import content from "@/assets/content.json";
 import goNextIcon from "@/assets/icons/icon-next-button.svg";
 import goBackIcon from "@/assets/icons/icon-back-button.svg";
+
 const router = useRouter();
 const paintingStore = usePaintingStore();
-
 function goNext() {
-  paintingStore.increment();
+  if (parseInt(paintingStore.index) != content.length - 1) {
+    paintingStore.increment();
+  }
   navigate();
 }
 function goPrevious() {
-  paintingStore.decrement();
+  if (paintingStore.index != 0) {
+    paintingStore.decrement();
+  }
   navigate();
 }
 function navigate() {
@@ -25,13 +29,18 @@ function navigate() {
 
 <template>
   <footer>
+    <div class="progress-bar"></div>
     <div class="painting-info">
       <h2>{{ content[paintingStore.index].name }}</h2>
       <span>{{ content[paintingStore.index].artist.name }}</span>
     </div>
     <div class="buttons">
-      <button @click="goPrevious"><img :src="goBackIcon" /></button>
-      <button @click="goNext"><img :src="goNextIcon" /></button>
+      <button @click="goPrevious">
+        <img :src="goBackIcon" alt="go back" />
+      </button>
+      <button @click="goNext">
+        <img :src="goNextIcon" alt="go next" />
+      </button>
     </div>
   </footer>
 </template>
@@ -42,7 +51,14 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  border-top: 1px solid black;
+  border-top: 1px solid $alt_grey;
+  position: relative;
+  .progress-bar {
+    position: absolute;
+    top: 0;
+    width: 20%;
+    border-bottom: 1px solid red;
+  }
 
   .painting-info {
     padding: 0 50px;
