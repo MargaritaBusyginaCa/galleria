@@ -4,6 +4,7 @@ import { useRouter } from "vue-router";
 import content from "@/assets/content.json";
 import goNextIcon from "@/assets/icons/icon-next-button.svg";
 import goBackIcon from "@/assets/icons/icon-back-button.svg";
+import { computed } from "vue";
 
 const router = useRouter();
 const paintingStore = usePaintingStore();
@@ -25,6 +26,12 @@ function navigate() {
     params: { id: paintingStore.index },
   });
 }
+
+const progress = computed(() => {
+  const currentPaintingNumber = parseInt(paintingStore.index) + 1;
+  const percentage = (currentPaintingNumber * 100) / content.length;
+  return `${Math.round(percentage)}%`;
+});
 </script>
 
 <template>
@@ -56,8 +63,8 @@ footer {
   .progress-bar {
     position: absolute;
     top: 0;
-    width: 20%;
-    border-bottom: 1px solid red;
+    width: v-bind(progress);
+    border-bottom: 1px solid $dark_grey;
   }
 
   .painting-info {
