@@ -21,7 +21,7 @@ const startSlideText = "Start slideshow";
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  margin: 20px 50px;
+  margin: 0 50px;
   a {
     text-decoration: none;
   }

@@ -13,16 +13,24 @@ onMounted(() => {
 });
 </script>
 <template>
-  <section class="painting-information">
-    <PaintingMain />
-    <PaintingHistory />
+  <section>
+    <div class="painting-information">
+      <PaintingMain />
+      <PaintingHistory />
+    </div>
+    <Footer />
   </section>
-  <Footer />
 </template>
 
 <style lang="scss" scoped>
+section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .painting-information {
-  margin-top: 70px;
+  padding-top: 70px;
   display: grid;
   grid-template-columns: 65% 35%;
 }

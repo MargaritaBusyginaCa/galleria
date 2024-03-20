@@ -14,13 +14,14 @@ const paintingStore = usePaintingStore();
 </template>
 
 <style lang="scss">
-@import "./assets/scss/variables.scss";
-@import "./assets/scss/theme.scss";
+@import "@/assets/scss/variables.scss";
+@import "@/assets/scss/theme.scss";
 .app {
   width: 100%;
   height: 100vh;
 }
 main {
   padding: 0 50px;
+  height: 90%;
 }
 </style>
