@@ -9,7 +9,7 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 const paintingStore = usePaintingStore();
 onMounted(() => {
-  paintingStore.setIndex(route.params.id);
+  paintingStore.setIndex(parseInt(localStorage.getItem("index")));
 });
 </script>
 <template>

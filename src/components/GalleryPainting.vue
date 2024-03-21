@@ -3,19 +3,21 @@ import { computed } from "vue";
 import { usePaintingStore } from "@/stores/painting";
 import content from "@/assets/content.json";
 import { useRouter } from "vue-router";
+import { transformToRouteName } from "@/utils/transformToRouteName.js";
 
 const router = useRouter();
 const paintingStore = usePaintingStore();
-
 const paintingsPath = computed(() => {
   return content.map((piece) => new URL(piece.images.gallery, import.meta.url));
 });
 function viewPainting(index) {
+  const paintingName = content[index].name;
   router.push({
     name: "Slideshow",
-    params: { id: index },
+    params: { name: transformToRouteName(paintingName) },
   });
   paintingStore.setIndex(index);
+  localStorage.setItem("index", index);
 }
 </script>
 

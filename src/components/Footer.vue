@@ -7,6 +7,7 @@ import goBackIcon from "@/assets/icons/icon-back-button.svg";
 import goNextIconDisabled from "@/assets/icons/icon-next-button-disabled.svg";
 import goBackIconDisabled from "@/assets/icons/icon-back-button-disabled.svg";
 import { computed } from "vue";
+import { transformToRouteName } from "@/utils/transformToRouteName.js";
 
 const router = useRouter();
 const paintingStore = usePaintingStore();
@@ -29,10 +30,14 @@ function goPrevious() {
   navigate();
 }
 function navigate() {
+  const paintingName = content[paintingStore.index].name;
   router.push({
     name: "Slideshow",
-    params: { id: paintingStore.index },
+    params: {
+      name: transformToRouteName(paintingName),
+    },
   });
+  localStorage.setItem("index", paintingStore.index);
 }
 
 const progress = computed(() => {
