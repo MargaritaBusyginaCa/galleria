@@ -1,7 +1,5 @@
 <script setup>
 import Navbar from "@/components/Navbar.vue";
-import { usePaintingStore } from "./stores/painting";
-const paintingStore = usePaintingStore();
 </script>
 
 <template>

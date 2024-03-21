@@ -4,12 +4,11 @@ import PaintingMain from "@/components/PaintingMain.vue";
 import PaintingHistory from "@/components/PaintingHistory.vue";
 import Footer from "@/components/Footer.vue";
 import { onMounted } from "vue";
-import { useRoute } from "vue-router";
 
-const route = useRoute();
 const paintingStore = usePaintingStore();
 onMounted(() => {
   paintingStore.setIndex(parseInt(localStorage.getItem("index")));
+  paintingStore.setSlideshow(true);
 });
 </script>
 <template>

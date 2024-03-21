@@ -1,5 +1,13 @@
 <script setup>
+import { usePaintingStore } from "@/stores/painting";
 import GalleryPainting from "../components/GalleryPainting.vue";
+import { onMounted } from "vue";
+
+const paintingStore = usePaintingStore();
+onMounted(() => {
+  localStorage.setItem("index", 0);
+  paintingStore.setSlideshow(false);
+});
 </script>
 <template>
   <div class="gallery-view">
