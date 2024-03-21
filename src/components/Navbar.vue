@@ -1,13 +1,34 @@
 <script setup>
+import { transformToRouteName } from "@/utils/transformToRouteName.js";
 import logo from "@/assets/icons/logo.svg";
-const startSlideText = "Start slideshow";
+import content from "@/assets/content.json";
+import { computed } from "vue";
+import { usePaintingStore } from "@/stores/painting";
+
+const paintingStore = usePaintingStore();
+const slideshowLink = computed(() => {
+  if (paintingStore.slideshowStarted) {
+    return { label: "Stop slideshow", name: "Home", to: "/" };
+  } else {
+    return {
+      label: "Start slideshow",
+      name: "Slideshow",
+      params: { name: transformToRouteName(content[0].name) },
+    };
+  }
+});
 </script>
 
 <template>
   <div class="navbar">
     <router-link to="/"> <img :src="logo" alt="galleria logo" /></router-link>
-    <router-link to="/">
-      <p>{{ startSlideText }}</p>
+    <router-link
+      :to="{
+        name: slideshowLink.name,
+        params: slideshowLink.params,
+      }"
+    >
+      <p>{{ slideshowLink.label }}</p>
     </router-link>
   </div>
 </template>

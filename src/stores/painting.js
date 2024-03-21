@@ -3,6 +3,7 @@ import { ref } from "vue";
 
 export const usePaintingStore = defineStore("painting", () => {
   const index = ref(0);
+  const slideshowStarted = ref(false);
   function increment() {
     index.value++;
   }
@@ -12,6 +13,15 @@ export const usePaintingStore = defineStore("painting", () => {
   function setIndex(newIndex) {
     index.value = newIndex;
   }
-
-  return { index, increment, decrement, setIndex };
+  function setSlideshow(newValue) {
+    slideshowStarted.value = newValue;
+  }
+  return {
+    index,
+    slideshowStarted,
+    increment,
+    decrement,
+    setIndex,
+    setSlideshow,
+  };
 });
