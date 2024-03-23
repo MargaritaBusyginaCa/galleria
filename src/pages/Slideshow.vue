@@ -35,4 +35,11 @@ main {
   display: grid;
   grid-template-columns: 65% 35%;
 }
+//smaller screen
+@media (max-width: 1320px) {
+  .painting-information {
+    grid-template-columns: 1fr;
+    padding: $padding_small;
+  }
+}
 </style>

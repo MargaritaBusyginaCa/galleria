@@ -91,4 +91,29 @@ const viewImagePath = new URL(
     margin-left: -250px;
   }
 }
+
+//smaller screen
+@media (max-width: 1320px) {
+  .painting-main {
+    .artist-image {
+      margin-top: 350px;
+    }
+  }
+}
+
+// tablet
+@media (max-width: 990px) {
+  .painting-main {
+    .description {
+      margin-left: -150px;
+    }
+    .artist-image {
+      margin-left: -150px;
+    }
+  }
+}
+
+//mobile
+@media (max-width: 774px) {
+}
 </style>
