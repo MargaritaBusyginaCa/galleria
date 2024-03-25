@@ -42,8 +42,18 @@ const goToSource = "Go to Source";
 @media (max-width: 1320px) {
   .painting-history {
     padding: 40px;
+
     .description {
       max-width: 700px;
+    }
+  }
+}
+
+// even smaller (mobile)
+@media (max-width: 740px) {
+  .painting-history {
+    .year {
+      font-size: 100px;
     }
   }
 }

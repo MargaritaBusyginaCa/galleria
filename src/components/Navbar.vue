@@ -21,7 +21,9 @@ const slideshowLink = computed(() => {
 
 <template>
   <div class="navbar">
-    <router-link to="/"> <img :src="logo" alt="galleria logo" /></router-link>
+    <router-link to="/">
+      <img :src="logo" alt="galleria logo" class="logo"
+    /></router-link>
     <router-link
       :to="{
         name: slideshowLink.name,
@@ -42,6 +44,7 @@ const slideshowLink = computed(() => {
   align-items: center;
   padding: 20px;
   margin: 0 50px;
+
   a {
     text-decoration: none;
   }
@@ -49,12 +52,28 @@ const slideshowLink = computed(() => {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 2.57px;
+    color: $dark_grey;
+  }
+  p:hover {
+    color: $black;
   }
 }
 //smaller screen
 @media (max-width: 1320px) {
   .navbar {
     margin: 0;
+  }
+}
+
+//mobile
+@media (max-width: 740px) {
+  .navbar {
+    p {
+      font-size: 9px;
+    }
+    .logo {
+      height: 32px;
+    }
   }
 }
 </style>

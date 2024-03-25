@@ -42,4 +42,10 @@ main {
     padding: $padding_small;
   }
 }
+//mobile
+@media (max-width: 740px) {
+  .painting-information {
+    padding: 20px;
+  }
+}
 </style>
