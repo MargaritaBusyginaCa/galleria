@@ -25,7 +25,7 @@ const viewImagePath = new URL(
   "@/assets/icons/icon-view-image.svg",
   import.meta.url
 );
-const visible = ref(true);
+const visible = ref(false);
 function openModal() {
   visible.value = true;
 }
