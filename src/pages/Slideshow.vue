@@ -45,7 +45,7 @@ main {
 //mobile
 @media (max-width: 740px) {
   .painting-information {
-    padding: 20px;
+    padding: 24px;
   }
 }
 </style>

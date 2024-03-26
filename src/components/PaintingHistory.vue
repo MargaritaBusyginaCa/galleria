@@ -35,6 +35,9 @@ const goToSource = "Go to Source";
     font-size: 9px;
     font-weight: bold;
     letter-spacing: 1.93px;
+    &:hover {
+      color: $black;
+    }
   }
 }
 
@@ -52,8 +55,12 @@ const goToSource = "Go to Source";
 // even smaller (mobile)
 @media (max-width: 740px) {
   .painting-history {
+    padding: 0;
+
     .year {
       font-size: 100px;
+      margin-top: 0;
+      text-align: right;
     }
   }
 }

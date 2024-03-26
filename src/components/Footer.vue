@@ -77,18 +77,18 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
   border-top: 1px solid $alt_grey;
   position: relative;
+  padding: 21px 40px;
   .progress-bar {
     position: absolute;
     top: 0;
+    left: 0;
     width: v-bind(progress);
     border-bottom: 1px solid $dark_grey;
   }
 
   .painting-info {
-    padding: 0 50px;
     h2 {
       color: $black;
       font-weight: 700;
@@ -103,12 +103,29 @@ footer {
   }
 
   .buttons {
-    padding: 0 50px;
     display: flex;
     gap: 20px;
     button {
       background-color: transparent;
       border: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+//mobile
+@media (max-width: 740px) {
+  footer {
+    padding: 17px 24px;
+    .painting-info {
+      padding: 0;
+      h2 {
+        font-size: 14px;
+      }
+      span {
+        font-size: 10px;
+      }
     }
   }
 }

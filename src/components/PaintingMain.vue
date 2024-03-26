@@ -90,6 +90,11 @@ const viewImagePath = new URL(
     display: flex;
     gap: 10px;
     height: 12px;
+    opacity: 0.8;
+    &:hover {
+      background-color: $dark_grey;
+      cursor: pointer;
+    }
     img {
       height: 12px;
       width: 12px;
@@ -132,9 +137,7 @@ const viewImagePath = new URL(
 @media (max-width: 740px) {
   .painting-main {
     flex-direction: column;
-
     .image {
-      // align-self: center;
       .large-hero {
         display: none;
       }
@@ -142,7 +145,7 @@ const viewImagePath = new URL(
         display: unset;
       }
       img {
-        width: 90%;
+        width: 100%;
       }
     }
     .view-image {
@@ -156,8 +159,13 @@ const viewImagePath = new URL(
       margin-top: -100px;
       padding: 24px;
       max-width: 80%;
+      h1 {
+        font-size: 24px;
+        line-height: 26px;
+      }
       p {
         margin: 0;
+        font-size: 15px;
       }
     }
     .artist-image {

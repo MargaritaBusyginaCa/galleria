@@ -53,9 +53,9 @@ const slideshowLink = computed(() => {
     font-size: 12px;
     letter-spacing: 2.57px;
     color: $dark_grey;
-  }
-  p:hover {
-    color: $black;
+    &:hover {
+      color: $black;
+    }
   }
 }
 //smaller screen
