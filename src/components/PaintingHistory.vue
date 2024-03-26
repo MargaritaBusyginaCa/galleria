@@ -41,7 +41,7 @@ const goToSource = "Go to Source";
   }
 }
 
-//smaller screen
+//smaller desktop
 @media (max-width: 1320px) {
   .painting-history {
     padding: 40px;
@@ -52,7 +52,7 @@ const goToSource = "Go to Source";
   }
 }
 
-// even smaller (mobile)
+// mobile
 @media (max-width: 740px) {
   .painting-history {
     padding: 0;

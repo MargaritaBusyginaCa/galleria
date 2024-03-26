@@ -35,7 +35,7 @@ main {
   display: grid;
   grid-template-columns: 65% 35%;
 }
-//smaller screen
+//smaller desktop
 @media (max-width: 1320px) {
   .painting-information {
     grid-template-columns: 1fr;

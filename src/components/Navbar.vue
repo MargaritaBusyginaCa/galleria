@@ -58,7 +58,7 @@ const slideshowLink = computed(() => {
     }
   }
 }
-//smaller screen
+//smaller desktop
 @media (max-width: 1320px) {
   .navbar {
     margin: 0;
