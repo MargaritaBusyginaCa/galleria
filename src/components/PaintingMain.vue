@@ -1,10 +1,19 @@
 <script setup>
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 import { usePaintingStore } from "@/stores/painting";
 import content from "@/assets/content.json";
 const paintingStore = usePaintingStore();
 const imagePath = computed(() => {
-  return new URL(content[paintingStore.index].images.gallery, import.meta.url);
+  return new URL(
+    content[paintingStore.index].images.hero.large,
+    import.meta.url
+  );
+});
+const imagePathForMobile = computed(() => {
+  return new URL(
+    content[paintingStore.index].images.hero.small,
+    import.meta.url
+  );
 });
 const artistImagePath = computed(() => {
   return new URL(content[paintingStore.index].artist.image, import.meta.url);
@@ -19,9 +28,19 @@ const viewImagePath = new URL(
 <template>
   <div class="painting-main">
     <div class="image">
-      <img :src="imagePath" :alt="content[paintingStore.index].name" />
+      <img
+        :src="imagePath"
+        :alt="content[paintingStore.index].name"
+        class="large-hero"
+      />
+      <img
+        :src="imagePathForMobile"
+        :alt="content[paintingStore.index].name"
+        class="mobile-hero"
+      />
       <div class="view-image">
         <img :src="viewImagePath" :alt="viewImageText" />
+
         <span>{{ viewImageText }}</span>
       </div>
     </div>
@@ -48,6 +67,9 @@ const viewImagePath = new URL(
   align-items: flex-start;
   .image {
     position: relative;
+    .mobile-hero {
+      display: none;
+    }
     img {
       height: 560px;
       width: 475px;
@@ -67,6 +89,12 @@ const viewImagePath = new URL(
     text-transform: uppercase;
     display: flex;
     gap: 10px;
+    height: 12px;
+    opacity: 0.8;
+    &:hover {
+      background-color: $dark_grey;
+      cursor: pointer;
+    }
     img {
       height: 12px;
       width: 12px;
@@ -89,6 +117,62 @@ const viewImagePath = new URL(
   .artist-image {
     margin-top: 500px;
     margin-left: -250px;
+  }
+}
+
+//smaller screen
+@media (max-width: 1320px) {
+  .painting-main {
+    .description {
+      margin-left: -150px;
+    }
+    .artist-image {
+      margin-top: 350px;
+      margin-left: -150px;
+    }
+  }
+}
+
+//mobile
+@media (max-width: 740px) {
+  .painting-main {
+    flex-direction: column;
+    .image {
+      .large-hero {
+        display: none;
+      }
+      .mobile-hero {
+        display: unset;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .view-image {
+      top: 0;
+      img {
+        width: 12px;
+      }
+    }
+    .description {
+      margin-left: unset;
+      margin-top: -100px;
+      padding: 24px;
+      max-width: 80%;
+      h1 {
+        font-size: 24px;
+        line-height: 26px;
+      }
+      p {
+        margin: 0;
+        font-size: 15px;
+      }
+    }
+    .artist-image {
+      margin: unset;
+      height: 64px;
+      width: 64px;
+    }
   }
 }
 </style>

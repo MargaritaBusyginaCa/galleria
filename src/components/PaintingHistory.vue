@@ -26,10 +26,8 @@ const goToSource = "Go to Source";
   }
   .description {
     max-width: 400px;
-    height: 300px;
     font-size: 14px;
     line-height: 28px;
-    padding-bottom: 165px;
   }
   .source {
     color: $dark_grey;
@@ -37,6 +35,33 @@ const goToSource = "Go to Source";
     font-size: 9px;
     font-weight: bold;
     letter-spacing: 1.93px;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+//smaller screen
+@media (max-width: 1320px) {
+  .painting-history {
+    padding: 40px;
+
+    .description {
+      max-width: 700px;
+    }
+  }
+}
+
+// even smaller (mobile)
+@media (max-width: 740px) {
+  .painting-history {
+    padding: 0;
+
+    .year {
+      font-size: 100px;
+      margin-top: 0;
+      text-align: right;
+    }
   }
 }
 </style>
