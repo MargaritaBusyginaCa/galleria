@@ -18,8 +18,31 @@ onMounted(() => {
 @import "@/assets/scss/variables.scss";
 .gallery-view {
   padding: $spacing_main;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  gap: $spacing_main;
+  columns: 4;
+  column-gap: $spacing_main;
+  > div {
+    margin-bottom: 40px;
+  }
+}
+
+//smaller desktop
+@media (max-width: 1320px) {
+  .gallery-view {
+    columns: 3;
+  }
+}
+
+//tablet
+@media (max-width: 990px) {
+  .gallery-view {
+    columns: 2;
+  }
+}
+
+//mobile
+@media (max-width: 620px) {
+  .gallery-view {
+    columns: 1;
+  }
 }
 </style>
