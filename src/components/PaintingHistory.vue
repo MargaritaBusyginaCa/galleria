@@ -44,7 +44,7 @@ const goToSource = "Go to Source";
 //smaller desktop
 @media (max-width: 1320px) {
   .painting-history {
-    padding: 40px;
+    padding: $spacing_main;
 
     .description {
       max-width: 700px;

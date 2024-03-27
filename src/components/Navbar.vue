@@ -42,8 +42,8 @@ const slideshowLink = computed(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  margin: 0 50px;
+  padding: 30px 0;
+  margin: 0 $spacing_main;
 
   a {
     text-decoration: none;
@@ -58,16 +58,12 @@ const slideshowLink = computed(() => {
     }
   }
 }
-//smaller desktop
-@media (max-width: 1320px) {
-  .navbar {
-    margin: 0;
-  }
-}
 
 //mobile
 @media (max-width: 740px) {
   .navbar {
+    margin: 0;
+    padding: 20px $spacing_main;
     p {
       font-size: 9px;
     }

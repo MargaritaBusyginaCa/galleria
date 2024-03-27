@@ -30,22 +30,24 @@ main {
   justify-content: space-between;
 }
 .painting-information {
-  padding: $padding_main;
+  padding: $spacing_main;
   padding-top: 70px;
   display: grid;
   grid-template-columns: 65% 35%;
 }
+
 //smaller desktop
 @media (max-width: 1320px) {
   .painting-information {
     grid-template-columns: 1fr;
-    padding: $padding_small;
   }
 }
+
 //mobile
 @media (max-width: 740px) {
   .painting-information {
     padding: 24px;
+    padding: $spacing_main;
   }
 }
 </style>

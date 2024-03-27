@@ -15,8 +15,11 @@ onMounted(() => {
   </div>
 </template>
 <style lang="scss">
+@import "@/assets/scss/variables.scss";
 .gallery-view {
+  padding: $spacing_main;
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(4, auto);
+  gap: $spacing_main;
 }
 </style>
