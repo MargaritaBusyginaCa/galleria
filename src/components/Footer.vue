@@ -79,7 +79,7 @@ footer {
   align-items: center;
   border-top: 1px solid $alt_grey;
   position: relative;
-  padding: 21px 40px;
+  padding: 21px $spacing_main;
   .progress-bar {
     position: absolute;
     top: 0;

@@ -38,8 +38,8 @@ function viewPainting(index) {
 
 <style lang="scss" scoped>
 .painting {
-  //To-Do: delete height later
-  height: 400px;
+  height: fit-content;
+  width: fit-content;
   position: relative;
   :hover {
     cursor: pointer;
@@ -57,6 +57,14 @@ function viewPainting(index) {
       padding: 0;
       margin: 0;
     }
+  }
+}
+
+//mobile
+@media (max-width: 740px) {
+  .painting {
+    height: unset;
+    width: unset;
   }
 }
 </style>

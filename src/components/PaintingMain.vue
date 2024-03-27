@@ -1,7 +1,9 @@
 <script setup>
-import { computed, onMounted } from "vue";
+import { computed, ref } from "vue";
 import { usePaintingStore } from "@/stores/painting";
 import content from "@/assets/content.json";
+import Modal from "./Modal.vue";
+
 const paintingStore = usePaintingStore();
 const imagePath = computed(() => {
   return new URL(
@@ -23,9 +25,17 @@ const viewImagePath = new URL(
   "@/assets/icons/icon-view-image.svg",
   import.meta.url
 );
+const visible = ref(false);
+function openModal() {
+  visible.value = true;
+}
+function closeModal() {
+  visible.value = false;
+}
 </script>
 
 <template>
+  <Modal :visible="visible" @close-modal="closeModal" />
   <div class="painting-main">
     <div class="image">
       <img
@@ -38,7 +48,7 @@ const viewImagePath = new URL(
         :alt="content[paintingStore.index].name"
         class="mobile-hero"
       />
-      <div class="view-image">
+      <div class="view-image" @click="openModal">
         <img :src="viewImagePath" :alt="viewImageText" />
 
         <span>{{ viewImageText }}</span>
@@ -120,7 +130,7 @@ const viewImagePath = new URL(
   }
 }
 
-//smaller screen
+//smaller desktop
 @media (max-width: 1320px) {
   .painting-main {
     .description {
