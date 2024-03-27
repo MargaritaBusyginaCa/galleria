@@ -30,13 +30,14 @@ function viewPainting(index) {
   >
     <img :src="paintingsPath[index]" :alt="painting.name" />
     <div class="painting-info">
-      <p>{{ painting.name }}</p>
-      <p>{{ painting.artist.name }}</p>
+      <p class="painting-name">{{ painting.name }}</p>
+      <p class="artist-name">{{ painting.artist.name }}</p>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/variables.scss";
 .painting {
   height: fit-content;
   width: fit-content;
@@ -47,15 +48,31 @@ function viewPainting(index) {
   img {
     height: 100%;
     width: 100%;
+    filter: brightness(60%);
+    &:hover {
+      opacity: 0.6;
+    }
   }
   .painting-info {
     position: absolute;
-    top: 0;
+    bottom: 0;
+    width: 90%;
     z-index: 1;
-    background-color: black;
+
     p {
       padding: 0;
       margin: 0;
+      color: $white;
+      padding: 0 30px 30px 30px;
+    }
+    .painting-name {
+      font-size: 24px;
+      font-weight: 700;
+      padding-bottom: 5px;
+    }
+    .artist-name {
+      font-size: 13px;
+      font-weight: 400;
     }
   }
 }

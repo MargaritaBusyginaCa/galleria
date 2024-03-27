@@ -43,6 +43,10 @@ onMounted(() => {
 @media (max-width: 620px) {
   .gallery-view {
     columns: 1;
+    padding: 20px;
+    > div {
+      margin-bottom: 20px;
+    }
   }
 }
 </style>
