@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted } from "vue";
+import { computed } from "vue";
 import { usePaintingStore } from "@/stores/painting";
 import content from "@/assets/content.json";
 import { useRouter } from "vue-router";
@@ -8,10 +8,7 @@ import { transformToRouteName } from "@/utils/transformToRouteName.js";
 const router = useRouter();
 const paintingStore = usePaintingStore();
 const paintingsPath = computed(() => {
-  return content.map((piece) => piece.images.gallery);
-});
-onMounted(() => {
-  console.log(content[0].images.gallery);
+  return content.map((piece) => new URL(piece.images.gallery, import.meta.url));
 });
 function viewPainting(index) {
   const paintingName = content[index].name;
