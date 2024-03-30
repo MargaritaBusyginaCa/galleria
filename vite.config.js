@@ -3,7 +3,6 @@ import { fileURLToPath } from "url";
 import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
-  base: "/galleria",
   plugins: [vue()],
   resolve: {
     alias: [

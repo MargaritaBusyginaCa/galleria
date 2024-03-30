@@ -4,15 +4,11 @@ import Slideshow from "@/pages/Slideshow.vue";
 const routes = [
   {
     path: "/",
-    redirect: "/galleria",
-  },
-  {
-    path: "/galleria",
     name: "Home",
     component: Home,
   },
   {
-    path: "/galleria/slideshow/:name",
+    path: "/slideshow/:name",
     name: "Slideshow",
     component: Slideshow,
   },
