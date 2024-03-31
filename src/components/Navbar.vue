@@ -42,7 +42,7 @@ const slideshowLink = computed(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0;
+  padding: 20px 0;
   margin: 0 $spacing_main;
 
   a {
