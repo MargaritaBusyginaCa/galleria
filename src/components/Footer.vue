@@ -38,6 +38,7 @@ function navigate() {
     },
   });
   localStorage.setItem("index", paintingStore.index);
+  scroll(0, 0);
 }
 
 const progress = computed(() => {
