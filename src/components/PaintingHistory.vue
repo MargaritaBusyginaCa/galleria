@@ -9,9 +9,12 @@ const goToSource = "Go to Source";
   <div class="painting-history">
     <p class="year">{{ content[paintingStore.index].year }}</p>
     <p class="description">{{ content[paintingStore.index].description }}</p>
-    <a :href="content[paintingStore.index].source" class="source">{{
-      goToSource
-    }}</a>
+    <a
+      :href="content[paintingStore.index].source"
+      class="source"
+      target="_blank"
+      >{{ goToSource }}</a
+    >
   </div>
 </template>
 
