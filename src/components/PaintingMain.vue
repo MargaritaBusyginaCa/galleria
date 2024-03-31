@@ -22,7 +22,7 @@ const artistImagePath = computed(() => {
 });
 const viewImageText = "View Image";
 const viewImagePath = new URL(
-  "../../public/icons/icon-view-image.svg",
+  "../../icons/icon-view-image.svg",
   import.meta.url
 );
 const visible = ref(false);
