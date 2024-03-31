@@ -47,7 +47,7 @@ function closeModal() {
   </div>
 </template>
 <style lang="scss" scoped>
-@import "@/assets/scss/variables.scss";
+@import "../../public/scss/variables.scss";
 .modal {
   position: fixed;
   z-index: 2;

@@ -22,7 +22,7 @@ const artistImagePath = computed(() => {
 });
 const viewImageText = "View Image";
 const viewImagePath = new URL(
-  "@/assets/icons/icon-view-image.svg",
+  "../../public/icons/icon-view-image.svg",
   import.meta.url
 );
 const visible = ref(false);
@@ -70,7 +70,7 @@ function closeModal() {
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/variables.scss";
+@import "../../public/scss/variables.scss";
 
 .painting-main {
   display: flex;
