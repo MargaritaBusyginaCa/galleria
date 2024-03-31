@@ -51,7 +51,7 @@ function closeModal() {
 .modal {
   position: fixed;
   z-index: 2;
-  padding-top: 50px; /* Location of the box */
+  padding-top: 10px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -66,7 +66,7 @@ function closeModal() {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 10px;
     padding: 10px;
     .image {
       .mobile-hero {
