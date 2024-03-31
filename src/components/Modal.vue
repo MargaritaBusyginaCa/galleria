@@ -93,8 +93,8 @@ function closeModal() {
   }
 }
 
-//mobile
-@media (max-width: 740px) {
+//smaller desktop
+@media (max-width: 1320px) {
   .image {
     .mobile-hero {
       display: block !important;
