@@ -37,7 +37,7 @@ function viewPainting(index) {
 </template>
 
 <style lang="scss" scoped>
-@import "../../public/scss/variables.scss";
+@import "@/assets/scss/variables.scss";
 .painting {
   height: fit-content;
   width: fit-content;

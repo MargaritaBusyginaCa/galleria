@@ -2,10 +2,10 @@
 import { usePaintingStore } from "@/stores/painting";
 import { useRouter } from "vue-router";
 import content from "@/assets/content.json";
-import goNextIcon from "../../public/icons/icon-next-button.svg";
-import goBackIcon from "../../public/icons/icon-back-button.svg";
-import goNextIconDisabled from "../../public/icons/icon-next-button-disabled.svg";
-import goBackIconDisabled from "../../public/icons/icon-back-button-disabled.svg";
+import goNextIcon from "/icons/icon-next-button.svg";
+import goBackIcon from "/icons/icon-back-button.svg";
+import goNextIconDisabled from "/icons/icon-next-button-disabled.svg";
+import goBackIconDisabled from "/icons/icon-back-button-disabled.svg";
 import { computed } from "vue";
 import { transformToRouteName } from "@/utils/transformToRouteName.js";
 
@@ -72,7 +72,7 @@ const progress = computed(() => {
   </footer>
 </template>
 <style lang="scss" scoped>
-@import "../../public/scss/variables.scss";
+@import "@/assets/scss/variables.scss";
 footer {
   display: flex;
   justify-content: space-between;

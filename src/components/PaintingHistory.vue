@@ -16,7 +16,7 @@ const goToSource = "Go to Source";
 </template>
 
 <style lang="scss" scoped>
-@import "../../public/scss/variables.scss";
+@import "@/assets/scss/variables.scss";
 .painting-history {
   .year {
     z-index: -1;

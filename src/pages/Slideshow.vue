@@ -22,7 +22,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-@import "../../public/scss/variables.scss";
+@import "@/assets/scss/variables.scss";
 main {
   height: 90%;
   display: flex;

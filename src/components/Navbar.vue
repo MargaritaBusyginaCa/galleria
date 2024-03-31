@@ -1,6 +1,6 @@
 <script setup>
 import { transformToRouteName } from "@/utils/transformToRouteName.js";
-import logo from "../../public/icons/logo.svg";
+import logo from "/icons/logo.svg";
 import content from "@/assets/content.json";
 import { computed } from "vue";
 import { usePaintingStore } from "@/stores/painting";
@@ -36,7 +36,7 @@ const slideshowLink = computed(() => {
 </template>
 
 <style lang="scss" scoped>
-@import "../../public/scss/variables.scss";
+@import "@/assets/scss/variables.scss";
 .navbar {
   border-bottom: 1px solid $alt_grey;
   display: flex;

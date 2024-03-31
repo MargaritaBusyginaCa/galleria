@@ -10,8 +10,8 @@ import Navbar from "@/components/Navbar.vue";
 </template>
 
 <style lang="scss">
-@import "../public/scss/variables.scss";
-@import "../public/scss/theme.scss";
+@import "@/assets/scss/variables.scss";
+@import "@/assets/scss/theme.scss";
 .app {
   width: 100%;
   height: 100vh;

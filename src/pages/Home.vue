@@ -15,7 +15,7 @@ onMounted(() => {
   </div>
 </template>
 <style lang="scss">
-@import "../../public/scss/variables.scss";
+@import "@/assets/scss/variables.scss";
 .gallery-view {
   padding: $spacing_main;
   columns: 4;
