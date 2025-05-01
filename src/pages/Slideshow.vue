@@ -24,7 +24,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 @import "@/assets/scss/variables.scss";
 main {
-  height: 90%;
+  height: calc(100% - 93px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
